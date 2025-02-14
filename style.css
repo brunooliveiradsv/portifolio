@@ -289,7 +289,7 @@ header {
 
     /* Ajustando a topbar */
     header {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 10px 0;
     }
