@@ -287,25 +287,12 @@ header {
         overflow: hidden;
     }
 
-    #home {
-        width: 100%;
-        height:100vh;
-    }
-
     /* Ajustando a topbar */
     header {
         flex-direction: row;
         height: auto;
         padding: 10px 0;
     }
-    
-/* Faz o vídeo ocupar toda a tela */
-     #background-page1 {
-    position: absolute;
-    width: 50%; /* Garante que o vídeo cubra toda a tela */
-    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 1.0);
-     }
 
     /* Botão Menu Sanduíche */
 
@@ -346,81 +333,3 @@ header {
         display: block;
         padding: 15px;
     }
-
-    /* Ajustando home */
-    #home {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    #texto h1 {
-        width: 90%;
-        font-size: 28px;
-    }
-
-    #video img, #video video {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Ajustando planos */
-    #planos {
-        width:100vw;
-        height:100vh;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
-
-    #planos article {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    /* Ajustando contato */
-    #caixas {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .caixa {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-  .carousel-container {
-    overflow: hidden; /* Desativa o scroll dentro do carrossel no celular */
-    width: 100%;
-    height: 100vh; /* Garante que ocupe toda a altura da tela */
-  }
-
-  .carousel {
-    display: flex;
-    transition: transform 0.3s ease;
-  }
-
-  .card {
-    min-width: 100%;
-    flex: 0 0 auto;
-    background-color: lightgray;
-    margin: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-    
-  .carousel-container {
-    display: flex; /* Garante que os cards fiquem lado a lado */
-  }
-
-  .card {
-    margin: 10px;
-    flex: 1;
-  }
-}
-
-#caixas {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100%;
