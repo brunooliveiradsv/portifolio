@@ -288,8 +288,8 @@ header {
     }
 
     #home {
-        width: 200vw;
-        height:150vh;
+        width: 100%;
+        height:100vh;
     }
 
     /* Ajustando a topbar */
@@ -418,3 +418,9 @@ header {
     flex: 1;
   }
 }
+
+#caixas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
