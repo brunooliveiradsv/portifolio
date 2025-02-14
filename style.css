@@ -298,7 +298,7 @@ header {
 /* Faz o vídeo ocupar toda a tela */
 #background-page1 {
     position: absolute;
-    width: 100%;
+    width: 50%;
     object-fit: cover; /* Garante que o vídeo cubra toda a tela */
     z-index: -1; /* Coloca o vídeo atrás do conteúdo */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 1.0);
