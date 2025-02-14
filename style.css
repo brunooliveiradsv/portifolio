@@ -283,6 +283,10 @@ header {
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
+        body, html {
+        overflow: hidden;
+    }
+
     /* Ajustando a topbar */
     header {
         flex-direction: column;
