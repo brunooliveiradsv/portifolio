@@ -366,7 +366,9 @@ header {
 
     /* Ajustando planos */
     #planos {
-        flex-direction: column;
+        width:100vw;
+        height:100vh;
+        flex-direction: row;
         align-items: center;
         gap: 20px;
     }
@@ -386,12 +388,6 @@ header {
         width: 90%;
         margin-bottom: 20px;
     }
-}
-/* Desabilita o scroll da página no celular */
-@media (max-width: 768px) {
-  body, html {
-    overflow: hidden; /* Desativa o scroll da página no celular */
-  }
 
   .carousel-container {
     overflow: hidden; /* Desativa o scroll dentro do carrossel no celular */
@@ -412,10 +408,7 @@ header {
     padding: 20px;
     text-align: center;
   }
-}
-
-/* No desktop, o layout permanece normal, sem carrossel */
-@media (min-width: 769px) {
+    
   .carousel-container {
     display: flex; /* Garante que os cards fiquem lado a lado */
   }
