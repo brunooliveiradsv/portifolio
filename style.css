@@ -137,7 +137,7 @@ header {
 
 /*PAGE 2*/
 
-#planos {
+.carousel {
     width: 100%;
     margin-top: 100px;
     height: 100vh;
@@ -147,7 +147,7 @@ header {
     align-items: center;
 }
 
-#planos article {
+.card {
     width: 250px;
     height: 350px;
     background-color: rgb(0, 6, 83);
@@ -158,26 +158,26 @@ header {
     align-items: center;
 }
 
-#planos article h1{
+.card h1{
     color: rgb(0, 119, 255);
     margin-bottom: 20px;
     font-size: 35px;
 }
 
-#planos article h3{
+.card h3{
     margin-top: 10px;
     color: rgb(224, 224, 224);
     font-size: 24px;
 }
 
-#planos article p{
+.card p{
     color: rgb(224, 224, 224);
     margin-bottom: 5px;
     font-size: 18px;
     padding: 8px;
 }
 
-#planos article button{
+.card button{
     background-color: rgb(0, 119, 255);
     color: rgb(224, 224, 224);
     border-radius: 20px;
@@ -189,7 +189,7 @@ header {
     font-weight: bold;
 }
 
-#planos article button:hover{
+.card article button:hover{
     background-color:rgb(0, 0, 0);
     color: rgb(0, 119, 255);
     font-weight: bold;
@@ -283,18 +283,15 @@ header {
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
-    /* Ajustando a topbar */
+    /* HEADER */
     header {
-        flex-direction: column;
+        flex-direction: row;
+        width: 100%;
         height: auto;
         padding: 10px 0;
     }
 
-    /* Botão Menu Sanduíche */
-
-    #video {
-        display: none;
-    }
+    /* MENU SANDUICHE */
 
     .menu-toggle {
         display: block;
@@ -330,43 +327,144 @@ header {
         padding: 15px;
     }
 
-    /* Ajustando home */
-    #home {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+/*HOME*/
+    #video {
+        display: none;
     }
 
     #texto h1 {
-        width: 90%;
-        font-size: 28px;
+        width: 350px;
+        font-size: 30px;
+    }
+    #texto button{
+        width: 300px;
+        height: 100px;
+        font-size: 34px;
+        border-radius: 30px;
     }
 
-    #video img, #video video {
-        width: 100%;
-        max-width: 300px;
+
+/*PLANOS*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Esconde os cards que não estão visíveis */
+    margin-top: 220px;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave */
+    
+  }
+  
+  .card {
+    min-width: 335px;
+    height: 450px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 100px;
+    border-radius: 50px;
+
+  }
+
+    .card h1 {
+        font-size: 50px;
+    }
+    .card h3 {
+        font-size: 30px;
+    }
+    .card p {
+        font-size: 25px;
+    }
+    .card button {
+        width: 250px;
+        height: 80px;
+        font-size: 30px;
     }
 
-    /* Ajustando planos */
-    #planos {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+  
+  /* Estilos para os botões */
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 180%;
+    transform: translateY(-50%);
+    /* Estilos para os botões (cor, tamanho, etc.) */
+    background-color: transparent;
+    border-style: none;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    color: rgb(0, 119, 255);
+    font-size: 40px;
+  }
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
 
-    #planos article {
-        width: 90%;
-        max-width: 300px;
-    }
+  .card {
+    width: 100%; /* Garante que cada card ocupe a largura total */
+  }
+/*COBERTURA*/
 
-    /* Ajustando contato */
-    #caixas {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .caixa {
-        width: 90%;
-        margin-bottom: 20px;
-    }
+/*CONTATO*/
+#contato {
+    width: 100vw;
+    height: 100vh;
+}
+
+#contato h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: -100px;
+}
+
+#caixas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+#caixas h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+#caixas p {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+#c2 button {
+    background-color: rgb(0, 119, 255);
+    border-style: none;
+    border-radius: 20px;
+    width: 200px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#c2 button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 119, 255);
+    cursor: pointer;
+}
+
 }

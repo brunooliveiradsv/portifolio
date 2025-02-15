@@ -42,12 +42,15 @@
     <article id="texto">
       <h1>Conecte-se com mais velocidade e estabilidade!</h1>
       <h1>Escolha o plano perfeito para sua casa ou empresa e navegue sem limites. 🚀</h1>
-      <button onclick="window.location.href='#planos'">Conheça nossos planos</button>
+      <button onclick="window.location.href='#planos'">Saiba mais</button>
     </article>
 
   </section>
-  <section class="pages" id="planos">
-    <article >
+  <section class="pages">
+    <div class="carousel-container"></div>
+    <div class="carousel">
+      <div id="planos" style="margin-top: -710px;"></div>
+    <article class="card">
       <h1>Básico</h1>
       <h3>Download</h3>
       <p>250Mb</p>
@@ -56,7 +59,7 @@
       <p>Wi-fi Gratuito</p>
       <a href="https://wa.me/5517991023030?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20contratar%20o%20plano%20de%20250Mb." target="_blank"><button>Contratar</button></a>
     </article>
-    <article >
+    <article class="card">
       <h1>Essêncial</h1>
       <h3>Download</h3>
       <p>350Mb</p>
@@ -65,7 +68,7 @@
       <p>Wi-fi Gratuito</p>
       <a href="https://wa.me/5517991023030?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20contratar%20o%20plano%20de%20350Mb." target="_blank"><button>Contratar</button></a>
     </article>
-    <article>
+    <article class="card">
       <h1>Turbo</h1>
       <h3>Download</h3>
       <p>500Mb</p>
@@ -74,6 +77,10 @@
       <p>Wi-fi Gratuito</p>
       <a href="https://wa.me/5517991023030?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20contratar%20o%20plano%20de%20500Mb." target="_blank"><button>Contratar</button></a>
     </article>
+  </div>
+    <button class="prev-button">❮</button>
+  <button class="next-button">❯</button>
+  </div>
   </section>
   <section class="pages" id="cobertura">
     <video autoplay loop muted playsinline id="background-page3">
@@ -92,14 +99,13 @@
       <h2>Endereço:</h2>
       <p>R. Aristídes Baccan, 2638 - Santa Casa,<br> Mirassol - SP, 15130-000</p>
     </article>
-    <h1>Ou</h1>
+    <h2>Ou</h2>
     <article id="c2" class="caixa">
       <h2>Pelo Whatsapp</h2>
       <a href="https://api.whatsapp.com/send/?phone=5517991023030&" target="_blank"><button>Conversar</button></a>
     </article>
   </main>
   </section>
-
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
