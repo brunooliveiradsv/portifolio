@@ -2,6 +2,18 @@ body, html {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-y: hidden;
+
+    font-size: 20px;
+}
+@keyframes menu-hover {
+    0% { opacity: 1; }
+    50% {opacity: 0.2; }
+    100% { opacity: 1; }
+}
+@keyframes point-hover {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Dispositivos pequenos (até 576px) */
@@ -32,15 +44,120 @@ body, html {
 
 /* Telas grandes (acima de 1200px) */
 @media (min-width: 1200px) {
+
+    /*HEADER*/
     header {
         width: 100vw;
         height: 10vh;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     #tittle {
         display: flex;
         font-size: 45px;
+        margin-right: 200px;
+        cursor: default;
     }
+    nav ul {
+        display: flex;
+        gap: 80px;
+    }
+    a {
+        color: rgb(82, 82, 82);
+        text-decoration: none;
+    }
+    a:hover {
+        color: white;
+        animation: menu-hover 2.0s linear infinite;
+    }
+    #point {
+        color: rgb(0, 255, 42);
+        animation: point-hover .5s infinite;
+        margin-top: -7px;
+    }
+
+    /*MAIN*/
+    main{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    main section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 400px;
+        margin-top: 70px;
+    }
+    #section-left img {
+        width: 300px;
+        border-radius: 100%;
+        transform: scale(1);
+        transition: transform 2s ease-in-out;
+    }
+    #section-left img:hover{
+        transform: scale(1.2);
+    }
+    /* Efeito para destacar letras */
+    .text-container {
+    display: inline-block;
+    transition: color 0.2s ease; /* Transição suave de cor */
+    cursor:default;
+    }
+    .highlight {
+    color: rgb(0, 255, 42); /* A cor verde para o texto quando dentro do efeito */
+    }
+
+    /* Estilo da janela pop-up */
+.popup {
+    width: 500px;
+    height: 350px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;  /* Começa oculta */
+    z-index: 1000;
+}
+
+/* Estilo do cabeçalho da janela */
+.popup-header {
+    background-color: rgb(17, 17, 17);
+    color: rgb(0, 255, 42);
+    padding: 10px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Estilo do corpo da janela */
+.popup-body {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-size: 16px;
+}
+.popup-body img {
+    width: 50x;
+    height: 50px;
+}
+/* Estilo do botão de fechar */
+button {
+    background: none;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #cf0606;
+}
 }
