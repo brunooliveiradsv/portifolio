@@ -6,51 +6,6 @@ body, html {
 
     font-size: 20px;
 }
-@keyframes menu-hover {
-    0% { opacity: 1; }
-    50% {opacity: 0.2; }
-    100% { opacity: 1; }
-}
-@keyframes point-hover {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Dispositivos pequenos (até 576px) */
-@media (max-width: 576px) {
-   /*HEADER*/
-body {
-    width: 100vw;
-    height: 100vh;
-}
-header {
-    width: 100vw;
-    height: 200px;
-}
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Celulares grandes (576px - 768px) */
-@media (min-width: 576px) and (max-width: 768px) {
-    body, html {
-        background-color: rgb(0, 255, 42);
-    }
-}
-
-/* Tablets e pequenos laptops (768px - 992px) */
-@media (min-width: 768px) and (max-width: 992px) {
-    body, html {
-        background-color: rgb(145, 255, 0);
-    }
-}
-
-/* Desktops padrão (992px - 1200px) */
-@media (min-width: 992px) and (max-width: 1200px) {  
-
-}
-
     /*HEADER*/
     header {
         width: 100vw;
@@ -180,4 +135,59 @@ button {
 button:hover {
     color: #cf0606;
 }
+@keyframes menu-hover {
+    0% { opacity: 1; }
+    50% {opacity: 0.2; }
+    100% { opacity: 1; }
+}
+@keyframes point-hover {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Dispositivos pequenos (até 576px) */
+@media (max-width: 576px) {
+   /*HEADER*/
+body {
+    width: 100vw;
+}
+header {
+    width: 100vw;
+    height: 100px;
+}
+#point {
+    margin-top: 40px;
+}
+nav {
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+main section {
+    width: 100vw;
+    text-align: center;
+}
+main section {
+    margin-top: -20px;
+}
+
+/* Celulares grandes (576px - 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    body, html {
+        background-color: rgb(0, 255, 42);
+    }
+}
+
+/* Tablets e pequenos laptops (768px - 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    body, html {
+        background-color: rgb(145, 255, 0);
+    }
+}
+
+/* Desktops padrão (992px - 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {  
+
 }
