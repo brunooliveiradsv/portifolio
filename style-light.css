@@ -1,0 +1,431 @@
+* {
+    background:transparent;
+	border:0;
+    box-sizing: border-box;
+	font-size:100%;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
+    text-decoration: none;
+    list-style: none;
+}
+
+@keyframes menu-hover {
+    0% { opacity: 1; }
+    50% {opacity: 0.2; }
+    100% { opacity: 1; }
+}
+@keyframes point-hover {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+    /*HEADER*/
+header {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#tittle {
+    display: flex;
+    font-size: 3rem;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+    gap: 5rem;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(59, 59, 59);
+    animation: menu-hover 2.0s linear infinite;
+}
+
+#point {
+    color: #00ff2a;
+    animation: point-hover .5s infinite;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+}
+
+    /*MAIN*/
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28rem;
+    height: 22rem;
+    margin-top: 4rem;
+}
+
+#section-left img {
+    width: 17rem;
+    border-radius: 100%;
+    transform: scale(1);
+     transition: transform 2s ease-in-out;
+}
+
+#section-left img:hover {
+    transform: scale(1.2);
+}
+
+#section-right {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    margin: 0.3rem;
+}
+
+.text-container {
+    display: inline-block;
+    transition: color 0.2s ease;
+    cursor:default;
+}
+
+.popup {
+    width: 44rem;
+    height: 27rem;
+    background-color: rgba(240, 240, 240, 0.849);
+    border-radius: 0.5rem;        
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;  /* Começa oculta */
+    z-index: 1000;
+    border: 1px #838383 solid;
+}
+
+/* Estilo do cabeçalho da janela */
+.popup-header {
+    background-color: rgb(122, 122, 122);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom: 1px #707070 solid;
+}
+
+/* Estilo do corpo da janela */
+.popup-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+#social {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30rem;
+    margin-top: 4rem;
+}
+
+#email {
+    display: flex;
+    margin-top:  4rem;
+    font-size: 1.5rem;
+}
+.popup-body a i {
+    font-size:  5rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo do botão de fechar */
+button {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+/* Ícone do menu sanduíche */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: white;
+    margin: 0.3rem 0;
+}
+
+
+/* Dispositivos pequenos (até 576px) */
+@media (max-width: 576px) {
+   /*HEADER*/
+body {
+    width: 100vw;
+}
+header {
+    width: 100vw;
+    height: 18vh;
+}
+#tittle {
+    width: 14rem;
+    font-size: 3rem;
+    margin-top: 1.2rem;
+}
+#point {
+    margin-top: 3.2rem;
+    margin-left: 0.7rem;
+}
+nav {
+    display: none;
+    margin-top: 1.7rem;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section {
+    width: 90vw;
+}
+
+main section img{
+    margin-top: -5rem;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6rem;
+}
+
+.menu a {
+    margin-top: 1rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-icon {
+    display: flex;
+}
+.popup {
+    width: 23rem;
+    height: 29rem;
+}
+
+}
+
+/* Celulares grandes (576px - 768px) SAMSUNG */
+@media (min-width: 576px) and (max-width: 768px) {
+    body {
+        width: 100vw;
+    }
+    header {
+        width: 100vw;
+        height: 35vh;
+    }
+    #tittle {
+        width: 26rem;
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+    #point {
+        margin-left: 0.7rem;
+        margin-top: 1px;
+    }
+    nav {
+        display: none;
+        margin-top: 1rem;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main section {
+        width: 90vw;
+        height: auto;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+    }
+    
+    .menu a {
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+        display: flex;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    .popup {
+        width: 42rem;
+        height: 30rem;
+        margin-top: 15rem;
+    }
+    
+}
+
+/* Tablets e pequenos laptops (768px - 992px) IPHONE */
+@media (min-width: 768px) and (max-width: 992px) {
+    body {
+        width: 100vw;
+    }
+    header {
+        width: 100vw;
+        height: 35vh;
+    }
+    #tittle {
+        width: 40rem;
+        font-size: 3rem;
+    }
+    #point {
+        margin-left: 0.7rem;
+        margin-top: 1px;
+    }
+    nav {
+        display: none;
+        margin-top: 1rem;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main section {
+        width: 90vw;
+        height: auto;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+    }
+    
+    .menu a {
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+        display: flex;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    .popup {
+        width: 45rem;
+        height: 30rem;
+        margin-top: 15rem;
+    }
+    
+}
+
+/* Desktops padrão (992px - 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {  
+    body {
+        width: 100vw;
+    }
+    header {
+        width: 100vw;
+        height: 18vh;
+    }
+    #tittle {
+        width: 14rem;
+        font-size: 3rem;
+        margin-top: 1.2rem;
+    }
+    #point {
+        margin-top: 3.2rem;
+        margin-left: 0.7rem;
+    }
+    nav {
+        display: none;
+        margin-top: 1.7rem;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main section {
+        width: 90vw;
+    }
+    
+    main section img{
+        margin-top: -5rem;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+    }
+    
+    .menu a {
+        margin-top: 1rem;
+        margin-right: -1rem;
+        margin-left: -1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-icon {
+        display: flex;
+    }
+    .popup {
+        width: 23rem;
+        height: 29rem;
+    }
+    
+}
