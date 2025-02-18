@@ -41,39 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Efeito de destaque ao redor do mouse no texto
-    const textElement = document.querySelector("#section-right p");
-    const textContent = textElement.innerHTML;
-
-    // Limpa o conteúdo original e preserva a formatação
-    textElement.innerHTML = "";
-
-    // Divide o conteúdo em spans sem perder os espaços
-    const parts = textContent.split(/(<[^>]+>|\s+)/g);
-    const fragment = document.createDocumentFragment();
-
-    parts.forEach(part => {
-        if (part.match(/<[^>]+>/)) {
-            const tag = document.createElement("span");
-            tag.innerHTML = part;
-            fragment.appendChild(tag);
-        } else if (part.match(/\s+/)) {
-            const space = document.createTextNode(" ");
-            fragment.appendChild(space);
-        } else {
-            part.split("").forEach(char => {
-                const span = document.createElement("span");
-                span.textContent = char;
-                span.classList.add("text-container");
-                fragment.appendChild(span);
-            });
-        }
-    });
-
-    textElement.appendChild(fragment);
-
-    // Efeito de destaque no texto com hover
-    const letters = document.querySelectorAll(".text-container");
+    
 
     document.addEventListener("mousemove", (event) => {
         const mouseX = event.clientX;
@@ -95,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     let zIndexCounter = 1000; // Define um valor inicial alto para o z-index
 
@@ -161,3 +130,22 @@ function toggleMenu() {
     let menu = document.querySelector('.menu');
     menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
 }
+
+function trocarCor(event) {
+    let cor = event.currentTarget.querySelectorAll('.cor');
+    
+    cor.forEach(div => {
+        if (div.classList.contains('ativa')) {
+            div.style.backgroundColor = ''; // Volta ao padrão
+            div.classList.remove('ativa');
+        } else {
+            div.style.backgroundColor = '#00ff2a'; // Cor alternativa
+            div.classList.add('ativa');
+        }
+    });
+}
+
+// Adiciona o evento de clique em todas as divs mães
+document.querySelectorAll('.cor').forEach(div => {
+    div.parentElement.addEventListener('click', trocarCor);
+});
