@@ -9,6 +9,12 @@
 	vertical-align:baseline;
     text-decoration: none;
     list-style: none;
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            /* Possível implementação no futuro */
 }
 
 @keyframes menu-hover {
@@ -110,7 +116,7 @@ p {
 .popup {
     width: 44rem;
     height: 27rem;
-    background-color: rgb(29, 29, 29);
+    background-color: rgba(29, 29, 29, 0.904);
     border-radius: 0.5rem;        
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -243,14 +249,20 @@ main section img{
 
 .menu a {
     margin-top: 1rem;
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: -2rem;
+    margin-left: -3rem;
     display: flex;
     flex-direction: column;
 }
 
+.menu ul button {
+    margin-left: -1.8rem;
+    margin-top: 1rem;
+}
+
 .menu-icon {
     display: flex;
+    margin-left: -1rem;
 }
 .popup {
     width: 23rem;
@@ -300,13 +312,21 @@ main section img{
     }
     
     .menu a {
-        margin-right: 2.5rem;
-        margin-left: 2.5rem;
+        margin-top: 1rem;
+        margin-right: -2rem;
+        margin-left: -3rem;
         display: flex;
+        flex-direction: column;
+    }
+    
+    .menu ul button {
+        margin-left: -1.8rem;
+        margin-top: 1rem;
     }
     
     .menu-icon {
         display: flex;
+        margin-left: -1rem;
     }
     .popup {
         width: 42rem;
@@ -355,13 +375,21 @@ main section img{
     }
     
     .menu a {
-        margin-right: 2.5rem;
-        margin-left: 2.5rem;
+        margin-top: 1rem;
+        margin-right: -2rem;
+        margin-left: -3rem;
         display: flex;
+        flex-direction: column;
+    }
+    
+    .menu ul button {
+        margin-left: -1.8rem;
+        margin-top: 1rem;
     }
     
     .menu-icon {
         display: flex;
+        margin-left: -1rem;
     }
     .popup {
         width: 45rem;
@@ -415,14 +443,20 @@ main section img{
     
     .menu a {
         margin-top: 1rem;
-        margin-right: -1rem;
-        margin-left: -1rem;
+        margin-right: -2rem;
+        margin-left: -3rem;
         display: flex;
         flex-direction: column;
     }
     
+    .menu ul button {
+        margin-left: -1.8rem;
+        margin-top: 1rem;
+    }
+    
     .menu-icon {
         display: flex;
+        margin-left: -1rem;
     }
     .popup {
         width: 23rem;
